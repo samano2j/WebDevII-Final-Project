@@ -1,10 +1,14 @@
-import axios from "axios";
+import { fetchRandomGIFs } from "./random";
+import { fetchTrendingGIFs } from "./trending";
+import { fetchSearchGIFs } from "./search";
 
 const SAMPLE_ENDPOINT = 'https://api.giphy.com/v1/gifs/trending'
 
 window.addEventListener('load', async () => {
-  const apiKey = process.env.API_KEY
-  console.log('API KEY is', apiKey)
-  const res = await axios.get(SAMPLE_ENDPOINT, { params: { api_key: apiKey } })
-  console.log('Response is', res)
+  // THis is a test
+  const randomGIFs = await fetchRandomGIFs(30)
+  const trendingGIFs = await fetchTrendingGIFs(30)
+  const searchGIFs = await fetchSearchGIFs('cat', 30)
+
+  console.log({ randomGIFs, trendingGIFs, searchGIFs })
 })
