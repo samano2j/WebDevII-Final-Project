@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 /*
 Random function 
 Input:  limit - number of gifs to return
