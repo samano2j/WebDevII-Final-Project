@@ -1,9 +1,30 @@
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+main .main-title {
+  display: flex;
+  align-items: center;
+}
+main p {
+  font-family: "inter";
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+main .main-img {
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  background-color: #1E1E1E;
 }
 
 /*# sourceMappingURL=style.css.map */

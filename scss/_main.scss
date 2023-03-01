@@ -1,0 +1,23 @@
+main{
+  width: 80%;
+  margin: 0 auto;
+
+  .main-title{
+    display: flex;
+    align-items: center;
+  }
+
+  p{
+    font-family: $font-main;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .main-img{
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem;
+  }
+}
+
