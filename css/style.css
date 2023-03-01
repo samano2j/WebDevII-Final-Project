@@ -1,9 +1,86 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+header {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  height: 50px;
+  display: flex;
+}
+.nav li {
+  display: block;
+}
+.nav li a {
+  padding: 10px 10px;
+  margin: 0 5px;
+  border-bottom: solid 2px;
+  font-size: 1.2em;
+}
+.nav li #logo {
+  border-bottom: none;
+}
+
+.logo {
+  margin-right: 150px;
+}
+
+#cate1, #cate6 {
+  border-color: #F20C0C;
+}
+
+#cate2 {
+  border-color: #9634F8;
+}
+
+#cate3 {
+  border-color: #34F8EC;
+}
+
+#cate4 {
+  border-color: #DCF834;
+}
+
+#cate5 {
+  border-color: #F8A934;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+.search-box input {
+  width: 60vw;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 8px 0 0 8px;
+}
+.search-box button {
+  width: 40px;
+  height: 40px;
+  background-color: #FB41FF;
+  border-radius: 0 8px 8px 0;
+  margin-left: -10px;
+}
+.search-box button i {
+  background-color: #FB41FF;
+  border-color: #ffffff;
+  font-size: 1.3em;
+}
+
+footer {
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  background-color: #1E1E1E;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
