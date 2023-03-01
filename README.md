@@ -5,3 +5,8 @@
 3. Add your api key to `.env`
 4. Run `$ npm i`
 5. Run `$ npm start`
+
+## How to compile JavaScript modules to dist/main.js
+```bash
+$ npm run build
+```
