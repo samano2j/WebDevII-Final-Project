@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 /*
 Search function 
 Input:  query - value from search bar
