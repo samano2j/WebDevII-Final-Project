@@ -1,67 +1,3 @@
-
-main {
-  width: 60%;
-  margin: 0 auto;
-}
-main .main-title {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-}
-main p {
-  font-family: "inter";
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bolder;
-}
-main .main-img {
-  width: 3rem;
-  height: auto;
-  margin-right: 1rem;
-}
-main .gif-container {
-  display: grid;
-  grid-gap: 1rem 1.5rem;
-  grid-template-columns: repeat(4, 12.5rem);
-  grid-auto-rows: 15rem;
-  margin-bottom: 3rem;
-}
-main .gif-item1 {
-  background-color: #eee8f1;
-}
-main .gif-item2 {
-  background-color: #eee8f1;
-}
-main .gif-item3 {
-  background-color: #eee8f1;
-}
-main .gif-item4 {
-  background-color: #eee8f1;
-}
-main .gif-item5 {
-  background-color: #eee8f1;
-}
-main .gif-item6 {
-  background-color: #eee8f1;
-}
-main .gif-item7 {
-  background-color: #eee8f1;
-}
-main .gif-item8 {
-  background-color: #eee8f1;
-}
-main .gif-item9 {
-  background-color: #eee8f1;
-}
-main .gif-item10 {
-  background-color: #eee8f1;
-}
-main .gif-item11 {
-  background-color: #eee8f1;
-}
-main .gif-item12 {
-  background-color: #eee8f1;
-
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 /*
 ** 
@@ -160,6 +96,70 @@ header {
   font-size: 1.2rem;
 }
 
+main {
+  width: 60%;
+  margin: 0 auto;
+}
+main .main-title {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+main p {
+  font-family: "inter";
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+main .main-img {
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+}
+main .gif-container {
+  display: grid;
+  grid-gap: 1rem 1.5rem;
+  grid-template-columns: repeat(4, 12.5rem);
+  grid-auto-rows: 15rem;
+  margin-bottom: 3rem;
+}
+main .gif-item1 {
+  background-color: #eee8f1;
+}
+main .gif-item2 {
+  background-color: #eee8f1;
+}
+main .gif-item3 {
+  background-color: #eee8f1;
+}
+main .gif-item4 {
+  background-color: #eee8f1;
+}
+main .gif-item5 {
+  background-color: #eee8f1;
+}
+main .gif-item6 {
+  background-color: #eee8f1;
+}
+main .gif-item7 {
+  background-color: #eee8f1;
+}
+main .gif-item8 {
+  background-color: #eee8f1;
+}
+main .gif-item9 {
+  background-color: #eee8f1;
+}
+main .gif-item10 {
+  background-color: #eee8f1;
+}
+main .gif-item11 {
+  background-color: #eee8f1;
+}
+main .gif-item12 {
+  background-color: #eee8f1;
+}
+
 /*
 ** 
 ** footer base [footer]
@@ -167,7 +167,6 @@ header {
 */
 footer {
   text-align: center;
-
 }
 
 * {
@@ -177,11 +176,8 @@ footer {
   text-decoration: none;
   list-style: none;
   background-color: #1E1E1E;
-
-
   color: #ffffff;
   font-family: "inter";
-
 }
 
 /*# sourceMappingURL=style.css.map */
