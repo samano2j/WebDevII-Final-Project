@@ -1,5 +1,5 @@
 main{
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 
   .main-title{
@@ -18,6 +18,74 @@ main{
     width: 3rem;
     height: auto;
     margin-right: 1rem;
+  }
+
+  .gif-container{
+    display: grid;
+    grid-gap: 0.8rem 1.5rem;
+    grid-template-columns: 12.5rem 12.5rem 12.5rem 12.5rem;
+    grid-template-rows: 10rem 10rem 10rem 10rem 10rem;
+    border: solid #ff6a00 1px;
+  }
+
+  .gif-item1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #ff9c9c;
+  }
+
+  .gif-item2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #ffcb70;
+  }
+
+  .gif-item3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: #7ee68d;
+  }
+
+  .gif-item4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-color: #7ee6e2;
+  }
+
+  .gif-item5 {
+    grid-column: 3 / 6;
+    grid-row: 3 / 5;
+    background-color: #95a7f5;
+  }
+
+  .gif-item6 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    background-color: #d095f5;
+  }
+
+  .gif-item7 {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    background-color: #e1bbfa;
+  }
+
+  .gif-item8 {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+    background-color: #d2b1e4;
+  }
+
+  .gif-item9 {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
+    background-color: #dcd2e1;
+  }
+
+  .gif-item10{
+    grid-column: 5 / 6;
+    grid-row: 5 / 6;
+    background-color: #eee8f1;
   }
 }
 
