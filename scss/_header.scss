@@ -1,0 +1,139 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/*
+** 
+** header base [header]
+**
+*/
+
+header {
+    min-width: 100vh;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+/*
+** 
+** navigation [ul]
+** <logo & tag>
+*/
+
+.nav {
+    height: 50px;
+    min-width: 100%;
+    display: flex;
+    // flex-wrap: wrap;
+
+    li{
+        display: block;
+        position: relative;
+        // vertical-align: text-bottom;
+        
+        a {
+            padding: 10px 10px 0 10px;
+            margin: 10px 5px;
+            border-bottom: solid 2px;
+            font-size: 1.3rem;
+            vertical-align: text-bottom;
+        }
+
+        #logo {
+            padding-top: -10px;
+            border-bottom: none;
+        }
+
+        .cate1, .cate6 {
+            border-color: $color-menu1;
+        }
+        
+        .cate2 {
+            border-color: $color-menu2;
+        }
+        
+        .cate3 {
+            border-color: $color-menu3;
+        }
+        
+        .cate4 {
+            border-color: $color-menu4;
+        }
+        
+        .cate5 {
+            border-color: $color-menu5;
+        }
+    }
+
+}
+
+
+.categories {
+    margin-top: 15px;
+}
+
+
+.logo {
+    margin-right: 8%;
+}
+
+
+// for tablet
+@media screen and (max-width: 979px) {
+
+
+}
+
+// for mobile
+@media screen and (max-width: 979px) {
+
+
+}
+
+
+
+/*
+** 
+** search box [form]
+**
+*/
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    input {
+        width: 60%;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 8px 0 0 8px;
+        padding-left: 10px;
+    }
+
+    input[type=text]:focus {
+        outline: none;
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        background-color: $color-serchbtn;
+        border-radius: 0 8px 8px 0;
+        margin-left: -10px;
+        cursor: pointer;
+        // border-color: $color-serchbtn;
+
+        i {
+            background-color: $color-serchbtn;
+            border-color: #ffffff;
+            font-size: 1.2rem;
+        }
+    }
+
+    // button:hover {
+        
+    // }
+}
