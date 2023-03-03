@@ -26,6 +26,7 @@ main{
     grid-gap: 1rem 1.5rem;
     grid-template-columns: repeat(4, 12.5rem);
     grid-auto-rows: 15rem;
+    grid-auto-flow: row;
     // border: solid #ff6a00 1px;
     margin-bottom: 3rem;
   }
