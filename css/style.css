@@ -283,6 +283,24 @@ main .gif-container {
   grid-auto-rows: 15rem;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 425px) {
+  main .gif-container {
+    display: grid;
+    grid-gap: 1rem 1.5rem;
+    grid-template-columns: repeat(2, 10rem);
+    grid-auto-rows: 15rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 979px) {
+  main .gif-container {
+    display: grid;
+    grid-gap: 1rem 1.5rem;
+    grid-template-columns: repeat(3, 10rem);
+    grid-auto-rows: 15rem;
+    margin-bottom: 3rem;
+  }
+}
 main .gif-item1 {
   background-color: #eee8f1;
 }

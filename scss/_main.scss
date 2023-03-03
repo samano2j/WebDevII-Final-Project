@@ -1,40 +1,57 @@
-main{
+main {
   width: 60%;
   margin: 0 auto;
 
-  .main-title{
+  .main-title {
     display: flex;
     align-items: center;
     margin: 1rem 0;
   }
 
-  p{
+  p {
     font-family: $font-main;
     color: white;
     font-size: 2.5rem;
     font-weight: bolder;
   }
 
-  .main-img{
+  .main-img {
     width: 3rem;
     height: auto;
     margin-right: 1rem;
   }
 
-  .gif-container{
+  .gif-container {
     display: grid;
     grid-gap: 1rem 1.5rem;
     grid-template-columns: repeat(4, 12.5rem);
     grid-auto-rows: 15rem;
     // border: solid #ff6a00 1px;
     margin-bottom: 3rem;
+    // grid-auto-flow: row;
+
+    @media screen and (max-width: 425px) {
+      display: grid;
+      grid-gap: 1rem 1.5rem;
+      grid-template-columns: repeat(2, 10rem);
+      grid-auto-rows: 15rem;
+      margin-bottom: 3rem;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 979px) {
+      display: grid;
+      grid-gap: 1rem 1.5rem;
+      grid-template-columns: repeat(3, 10rem);
+      grid-auto-rows: 15rem;
+      margin-bottom: 3rem;
+    }
   }
 
-  .gif-item1{
+  .gif-item1 {
     background-color: #eee8f1;
   }
 
-  .gif-item2{
+  .gif-item2 {
     background-color: #eee8f1;
   }
 
@@ -66,16 +83,15 @@ main{
     background-color: #eee8f1;
   }
 
-  .gif-item10{
+  .gif-item10 {
     background-color: #eee8f1;
   }
 
-  .gif-item11{
+  .gif-item11 {
     background-color: #eee8f1;
   }
 
-  .gif-item12{
+  .gif-item12 {
     background-color: #eee8f1;
   }
 }
-
