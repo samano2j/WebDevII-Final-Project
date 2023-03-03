@@ -11,6 +11,5 @@ export const fetchCategoryGIFs = async () => {
 
     const { data: gifData } = await axios.get(url, { params })
 
-    console.log(gifData)
     return gifData.data
 }
