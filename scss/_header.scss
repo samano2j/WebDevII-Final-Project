@@ -18,7 +18,7 @@ header {
 ** navigation [ul]
 ** <logo & tag>
 */
-@media screen and (min-width: 979px) {
+@media screen and (min-width: 1142px) {
   .headerNavOuter {
     height: 50px;
     min-width: 100%;
@@ -75,7 +75,7 @@ header {
 }
 
 // for mobile
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 1142px) {
   .header {
     width: 100%;
     position: fixed;

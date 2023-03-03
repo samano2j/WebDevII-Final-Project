@@ -17,7 +17,7 @@ header {
 ** navigation [ul]
 ** <logo & tag>
 */
-@media screen and (min-width: 979px) {
+@media screen and (min-width: 1142px) {
   .headerNavOuter {
     height: 50px;
     min-width: 100%;
@@ -66,7 +66,7 @@ header {
     border-color: #F8A934;
   }
 }
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 1142px) {
   .header {
     width: 100%;
     position: fixed;
@@ -287,7 +287,7 @@ main .gif-container {
   main .gif-container {
     display: grid;
     grid-gap: 1rem 1.5rem;
-    grid-template-columns: repeat(2, 10rem);
+    grid-template-columns: repeat(2, 11rem);
     grid-auto-rows: 15rem;
     margin-bottom: 3rem;
   }
@@ -296,7 +296,7 @@ main .gif-container {
   main .gif-container {
     display: grid;
     grid-gap: 1rem 1.5rem;
-    grid-template-columns: repeat(3, 10rem);
+    grid-template-columns: repeat(3, 11rem);
     grid-auto-rows: 15rem;
     margin-bottom: 3rem;
   }
