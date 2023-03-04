@@ -6,6 +6,7 @@ import { fetchAutoComplete } from "./autocomplete"
 import { fetchChannelSearch } from "./channelSearch";
 import { fetchSearchSuggestions } from "./search-suggestion";
 import { fetchTrendingSearch } from "./trending-search";
+import $ from "jquery";
 
 const SAMPLE_ENDPOINT = 'https://api.giphy.com/v1/gifs/trending'
 
