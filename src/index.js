@@ -1,3 +1,8 @@
+import './scss/style.scss'
+import './images/logo.png'
+import './images/trend.png'
+import './images/shuffle.png'
+import { toggleNav } from "./js/hamburgermenu";
 import { fetchRandomGIFs } from "./random";
 import { fetchTrendingGIFs } from "./trending";
 import { fetchSearchGIFs } from "./search";
@@ -11,6 +16,7 @@ import $ from "jquery";
 const SAMPLE_ENDPOINT = 'https://api.giphy.com/v1/gifs/trending'
 
 window.addEventListener('load', async () => {
+  toggleNav()
   
   const trendingSearch = await fetchTrendingSearch()
   for (let i = 0; i < 3; i++) {
