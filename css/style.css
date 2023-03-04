@@ -284,6 +284,19 @@ main .main-title {
   display: flex;
   align-items: center;
   margin: 1rem 0;
+  justify-content: space-between;
+}
+main .main-title .group {
+  display: flex;
+}
+main .main-title ul {
+  display: flex;
+}
+main .main-title ul li button {
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 15px;
 }
 main p {
   font-family: "inter";
@@ -320,6 +333,15 @@ main .gifItemClass {
 }
 main .main-search {
   display: none;
+}
+main .main-search ul {
+  display: flex;
+}
+main .main-search ul li button {
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 15px;
 }
 
 /*
