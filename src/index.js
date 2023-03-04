@@ -248,9 +248,3 @@ $('.main-search').click(async function(event){
 })
 
 toggleNav()
-
-// $(window).scroll(function () {
-//   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-//     console.log("Near bottom!")
-//   }
-// })
