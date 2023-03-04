@@ -39,33 +39,11 @@ main {
   }
 
   .gif-container {
-    // display: grid;
-    // grid-gap: 1% 1%;
-    // grid-template-columns: repeat(4, 24%);
-    // grid-auto-rows: 15rem;
-    // margin-bottom: 3rem;
-
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 1000px;
     gap: 20px;
-
-    // column-width: 25%;
-    // column-gap: 25px;
-
-    
-    // border: solid #ff6a00 1px;
-    // grid-auto-flow: row;
-    // justify-content: center;
-
-    // @media screen and (max-width: 425px) {
-    //   display: grid;
-    //   grid-gap: 1rem 1.5rem;
-    //   grid-template-columns: repeat(2, 11rem);
-    //   grid-auto-rows: 15rem;
-    //   margin-bottom: 3rem;
-    // }
 
     @media screen and (max-width: 979px) {
       display: grid;
