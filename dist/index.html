@@ -27,22 +27,22 @@
         <!-- navigation -->
         <ul class="headerNav">
           <li class="categories">
-            <a href="" class="cate1"> #Anime </a>
+            <a href="" class="cate1"> Anime </a>
           </li>
           <li class="categories">
-            <a href="" class="cate2"> #Movies </a>
+            <a href="" class="cate2"> Movies </a>
           </li>
           <li class="categories">
-            <a href="" class="cate3"> #memes</a>
+            <a href="" class="cate3"> Memes</a>
           </li>
           <li class="categories">
-            <a href="" class="cate4"> #Actions </a>
+            <a href="" class="cate4"> Actions </a>
           </li>
           <li class="categories">
-            <a href="" class="cate5"> #greetings </a>
+            <a href="" class="cate5"> Greetings </a>
           </li>
           <li class="categories">
-            <a href="" class="cate6"> #emotions </a>
+            <a href="" class="cate6"> Emotions </a>
           </li>
           <!-- </ul> -->
         </ul>
@@ -78,47 +78,35 @@
           <i class="bi bi-search"></i>
         </button>
       </form>
+      <div class="autocomplete">
+      </div>
     </header>
 
     <main>
+      <div class="main-search">
+        <div class="main-title">
+          <p>Searched by: </p>
+          <ul class="related-tags">
+          </ul>
+        </div>
+        <div class="gif-container">
+        </div>
+      </div>
+
       <div class="main-top">
         <div class="main-title">
-          <img class="main-img" src="img/trend.png" alt="" />
+          <img class="main-img" src="/img/trend.png" alt="" />
           <p>Trending</p>
         </div>
         <div class="gif-container">
-          <div class="gif-item1">1</div>
-          <div class="gif-item2">2</div>
-          <div class="gif-item3">3</div>
-          <div class="gif-item4">4</div>
-          <div class="gif-item5">5</div>
-          <div class="gif-item6">6</div>
-          <div class="gif-item7">7</div>
-          <div class="gif-item8">8</div>
-          <div class="gif-item9">9</div>
-          <div class="gif-item10">10</div>
-          <div class="gif-item10">11</div>
-          <div class="gif-item10">12</div>
         </div>
       </div>
       <div class="main-bottom">
         <div class="main-title">
-          <img class="main-img" src="img/shuffle.png" alt="" />
+          <img class="main-img" src="/img/shuffle.png" alt="" />
           <p>Random</p>
         </div>
         <div class="gif-container">
-          <div class="gif-item1">1</div>
-          <div class="gif-item2">2</div>
-          <div class="gif-item3">3</div>
-          <div class="gif-item4">4</div>
-          <div class="gif-item5">5</div>
-          <div class="gif-item6">6</div>
-          <div class="gif-item7">7</div>
-          <div class="gif-item8">8</div>
-          <div class="gif-item9">9</div>
-          <div class="gif-item10">10</div>
-          <div class="gif-item10">11</div>
-          <div class="gif-item10">12</div>
         </div>
       </div>
     </main>
@@ -126,5 +114,11 @@
     <footer>
       <p>&copy; WebDev2 Final Project team3</p>
     </footer>
+
+    <script src="/js/GIPHY-API.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/trending.js"></script>
+    <script src="/js/random.js"></script>
+    <script src="/js/hamburgermenu.js"></script>
   </body>
 </html>

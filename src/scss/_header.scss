@@ -273,6 +273,7 @@ header {
     background-color: #ffffff;
     border-radius: 8px 0 0 8px;
     padding-left: 10px;
+    color: black;
   }
 
   input[type="text"]:focus {
@@ -297,9 +298,26 @@ header {
       border-color: #ffffff;
       font-size: 1.2rem;
     }
+
   }
+
 
   // button:hover {
 
   // }
+}
+
+.autocomplete p {
+  width: 62.5%;
+  background-color: white;
+  margin: auto;
+  color: black;
+  text-align: left;
+  padding: 10px;
+}
+
+.autocomplete p:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
