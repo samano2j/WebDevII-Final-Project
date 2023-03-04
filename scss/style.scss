@@ -1,0 +1,16 @@
+@import "base";
+@import "header";
+@import "main";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  background-color: $color-background;
+
+  color: #ffffff;
+  font-family: $font-main;
+}

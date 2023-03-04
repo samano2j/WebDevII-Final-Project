@@ -1,0 +1,98 @@
+main {
+  width: 60%;
+  margin: 0 auto;
+
+  .main-title {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  p {
+    font-family: $font-main;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .main-img {
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem;
+  }
+
+  .gif-container {
+    display: grid;
+    grid-gap: 1% 1%;
+    grid-template-columns: repeat(4, 24%);
+    grid-auto-rows: 15rem;
+    // border: solid #ff6a00 1px;
+    margin-bottom: 3rem;
+    // grid-auto-flow: row;
+    // justify-content: center;
+
+    // @media screen and (max-width: 425px) {
+    //   display: grid;
+    //   grid-gap: 1rem 1.5rem;
+    //   grid-template-columns: repeat(2, 11rem);
+    //   grid-auto-rows: 15rem;
+    //   margin-bottom: 3rem;
+    // }
+
+    @media screen and (max-width: 979px) {
+      display: grid;
+      grid-gap: 1rem 1.5rem;
+      grid-template-columns: repeat(3, 32%);
+      grid-auto-rows: 15rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .gif-item1 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item2 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item3 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item4 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item5 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item6 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item7 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item8 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item9 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item10 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item11 {
+    background-color: #eee8f1;
+  }
+
+  .gif-item12 {
+    background-color: #eee8f1;
+  }
+}
