@@ -239,6 +239,7 @@ header {
   background-color: #ffffff;
   border-radius: 8px 0 0 8px;
   padding-left: 10px;
+  color: black;
 }
 .search-box input[type=text]:focus {
   outline: none;
@@ -260,6 +261,21 @@ header {
   font-size: 1.2rem;
 }
 
+.autocomplete p {
+  width: 62.5%;
+  background-color: white;
+  margin: auto;
+  color: black;
+  text-align: left;
+  padding: 10px;
+}
+
+.autocomplete p:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
 main {
   width: 60%;
   margin: 0 auto;
@@ -279,13 +295,14 @@ main .main-img {
   width: 3rem;
   height: auto;
   margin-right: 1rem;
+  cursor: pointer;
 }
 main .gif-container {
-  display: grid;
-  grid-gap: 1% 1%;
-  grid-template-columns: repeat(4, 24%);
-  grid-auto-rows: 15rem;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 1000px;
+  gap: 20px;
 }
 @media screen and (max-width: 979px) {
   main .gif-container {
@@ -296,41 +313,13 @@ main .gif-container {
     margin-bottom: 3rem;
   }
 }
-main .gif-item1 {
-  background-color: #eee8f1;
+main .gifItemClass {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-main .gif-item2 {
-  background-color: #eee8f1;
-}
-main .gif-item3 {
-  background-color: #eee8f1;
-}
-main .gif-item4 {
-  background-color: #eee8f1;
-}
-main .gif-item5 {
-  background-color: #eee8f1;
-}
-main .gif-item6 {
-  background-color: #eee8f1;
-}
-main .gif-item7 {
-  background-color: #eee8f1;
-}
-main .gif-item8 {
-  background-color: #eee8f1;
-}
-main .gif-item9 {
-  background-color: #eee8f1;
-}
-main .gif-item10 {
-  background-color: #eee8f1;
-}
-main .gif-item11 {
-  background-color: #eee8f1;
-}
-main .gif-item12 {
-  background-color: #eee8f1;
+main .main-search {
+  display: none;
 }
 
 /*

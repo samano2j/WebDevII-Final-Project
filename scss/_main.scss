@@ -19,15 +19,27 @@ main {
     width: 3rem;
     height: auto;
     margin-right: 1rem;
+    cursor: pointer;
   }
 
   .gif-container {
-    display: grid;
-    grid-gap: 1% 1%;
-    grid-template-columns: repeat(4, 24%);
-    grid-auto-rows: 15rem;
+    // display: grid;
+    // grid-gap: 1% 1%;
+    // grid-template-columns: repeat(4, 24%);
+    // grid-auto-rows: 15rem;
+    // margin-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1000px;
+    gap: 20px;
+
+    // column-width: 25%;
+    // column-gap: 25px;
+
+    
     // border: solid #ff6a00 1px;
-    margin-bottom: 3rem;
     // grid-auto-flow: row;
     // justify-content: center;
 
@@ -48,51 +60,13 @@ main {
     }
   }
 
-  .gif-item1 {
-    background-color: #eee8f1;
+  .gifItemClass {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .gif-item2 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item3 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item4 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item5 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item6 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item7 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item8 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item9 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item10 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item11 {
-    background-color: #eee8f1;
-  }
-
-  .gif-item12 {
-    background-color: #eee8f1;
+  .main-search {
+    display: none;
   }
 }
