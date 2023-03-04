@@ -1,7 +1,7 @@
-function toggleNav() {
-  var body = document.body;
-  var hamburger = document.getElementById("js-hamburger");
-  var blackBg = document.getElementById("js-black-bg");
+export function toggleNav() {
+  const body = document.body;
+  const hamburger = document.getElementById("js-hamburger");
+  const blackBg = document.getElementById("js-black-bg");
 
   hamburger.addEventListener("click", function () {
     body.classList.toggle("nav-open");
@@ -10,4 +10,3 @@ function toggleNav() {
     body.classList.remove("nav-open");
   });
 }
-toggleNav();
