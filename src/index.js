@@ -12,8 +12,6 @@ import { fetchTrendingSearch } from "./js/trending-search";
 import $ from "jquery";
 
 window.addEventListener('load', async () => {
-  toggleNav()
-
   const trendingSearch = await fetchTrendingSearch()
   for (let i = 0; i < 3; i++) {
     const trendingTag = document.createElement('li')
@@ -248,6 +246,8 @@ $('.main-search').click(async function(event){
     $(".autocomplete").empty()
   }
 })
+
+toggleNav()
 
 // $(window).scroll(function () {
 //   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
