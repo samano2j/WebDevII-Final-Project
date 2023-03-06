@@ -18,27 +18,74 @@ window.addEventListener('load', async () => {
     $(trendingTag).html(`<button>#${trendingSearch[i]}</button>`)
     $('.trending-tags').append(trendingTag)
   }
-
-  const trendingGIFs = await fetchTrendingGIFs(12)
-  for (let i = 0; i < 12; i++) {
+  
+  const trendingGIFs = await fetchTrendingGIFs(16)
+  
+  for (let i = 1; i < 17; i++) {
+    let currNum = i
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
+    }
+    else {
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
+    }
+  
+    const randomNum = Math.floor(Math.random() * 300) + 100
     const gifItem = document.createElement('div')
-    const randomNum = Math.floor(Math.random() * 200) + 150
-
-    $(gifItem).css({"background-image": `url(${trendingGIFs[i].images.downsized.url})`})
+    $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
     $(gifItem).height(randomNum)
     $(gifItem).addClass('gifItemClass')
-    $(".main-top .gif-container").append(gifItem)
+    $(`.main-top .gif-container .column-${currNum}`).append(gifItem)
   }
 
-  const randomGIFs = await fetchRandomGIFs(12)
-  for (let i = 0; i < 12; i++) {
-    const gifItem = document.createElement('div')
-    const randomNum = Math.floor(Math.random() * 200) + 100
+  const randomGIFs = await fetchRandomGIFs(16)
+  for (let i = 1; i < 17; i++) {
+    let currNum = i
 
-    $(gifItem).css({"background-image": `url(${randomGIFs[i].images.downsized.url})`})
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
+    }
+    else {
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
+    }
+    const randomNum = Math.floor(Math.random() * 300) + 100
+    const gifItem = document.createElement('div')
+    $(gifItem).css({"background-image": `url(${randomGIFs[i - 1].images.downsized.url})`})
     $(gifItem).height(randomNum)
     $(gifItem).addClass('gifItemClass')
-    $(".main-bottom .gif-container").append(gifItem)
+    $(`.main-bottom .gif-container .column-${currNum}`).append(gifItem)
   }
 
 })
@@ -51,16 +98,45 @@ $('#submit_btn').click(async function(event) {
     $('.main-search').css({'display':'block'})
 
     const q = $('#search_word').val().trim()
-    const searchGIFs = await fetchSearchGIFs(q, 12)
+    const searchGIFs = await fetchSearchGIFs(q, 50)
     $(".main-search .gif-container").empty()
+    $(`.main-search .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
     $('.main-search .main-title').html(`<p>Searched by: ${q}</p><ul class="related-tags"></ul>`)
-    for (let i = 0; i < 12; i++) {
+    for (let i = 1; i < 50; i++) {
+      let currNum = i
+
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
+      }
+      else {
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
+      }
+      
       const gifItem = document.createElement('div')
-      const randomNum = Math.floor(Math.random() * 200) + 100
+      const randomNum = Math.floor(Math.random() * 300) + 100
       $(gifItem).height(randomNum)
-      $(gifItem).css({"background-image": `url(${searchGIFs[i].images.downsized.url})`})
+      $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
       $(gifItem).addClass('gifItemClass')
-      $(".main-search .gif-container").append(gifItem)
+      $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
     }
 
     const relatedSuggestion = await fetchSearchSuggestions(q)
@@ -75,11 +151,91 @@ $('#submit_btn').click(async function(event) {
   }
 })
 
-$('.siteIcon').click(function(event) {
+$('.siteIcon').click(async function(event) {
   event.preventDefault()
   $('.main-search').css({'display':'none'})
   $('.main-top').css({'display':'block'})
   $('.main-bottom').css({'display':'block'})
+
+  $(`.main-top .gif-container`).empty()
+    $(`.main-top .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
+
+    const trendingGIFs = await fetchTrendingGIFs(16)
+    for (let i = 1; i < 17; i++) {
+      let currNum = i
+  
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
+      }
+      else {
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
+      }
+      const randomNum = Math.floor(Math.random() * 300) + 100
+      const gifItem = document.createElement('div')
+      $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
+      $(gifItem).height(randomNum)
+      $(gifItem).addClass('gifItemClass')
+      $(`.main-top .gif-container .column-${currNum}`).append(gifItem)
+    }
+
+    $(".main-bottom .gif-container").empty()
+    $(`.main-bottom .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
+
+    const randomGIFs = await fetchRandomGIFs(16)
+    for (let i = 1; i < 17; i++) {
+      let currNum = i
+  
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
+      }
+      else {
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
+      }
+      const randomNum = Math.floor(Math.random() * 300) + 100
+      const gifItem = document.createElement('div')
+      $(gifItem).css({"background-image": `url(${randomGIFs[i - 1].images.downsized.url})`})
+      $(gifItem).height(randomNum)
+      $(gifItem).addClass('gifItemClass')
+      $(`.main-bottom .gif-container .column-${currNum}`).append(gifItem)
+    }
 })
 
 $('.search-box input').keyup(async function(event) {
@@ -101,16 +257,45 @@ $('.autocomplete').click(async function(event){
   $('.main-search').css({'display':'block'})
 
   const q = $(event.target).html()
-  const searchGIFs = await fetchSearchGIFs(q, 12)
+  const searchGIFs = await fetchSearchGIFs(q, 50)
   $(".main-search .gif-container").empty()
+  $(`.main-search .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
   $('.main-search .main-title').html(`<p>Searched by: ${q}</p><ul class="related-tags"></ul>`)
-  for (let i = 0; i < 12; i++) {
+  for (let i = 1; i < 50; i++) {
+    let currNum = i
+
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
+    }
+    else {
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
+    }
+
     const gifItem = document.createElement('div')
-    const randomNum = Math.floor(Math.random() * 200) + 100
+    const randomNum = Math.floor(Math.random() * 300) + 100
     $(gifItem).height(randomNum)
-    $(gifItem).css({"background-image": `url(${searchGIFs[i].images.downsized.url})`})
+    $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
     $(gifItem).addClass('gifItemClass')
-    $(".main-search .gif-container").append(gifItem)
+    $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
   }
 
   const relatedSuggestion = await fetchSearchSuggestions(q)
@@ -124,28 +309,96 @@ $('.autocomplete').click(async function(event){
   $(".autocomplete").empty()
 })
 
-$('.main-img').click(async function(event) {
+$('.group').click(async function(event) {
   event.preventDefault()
-  if($(event.target).attr('alt') == 'trending') {
+  if($(event.target).attr('alt') == 'trending' || $(event.target).html() == 'Trending') {
     $('.main-search').css({'display':'none'})
     $('.main-top').css({'display':'block'})
     $('.main-bottom').css({'display':'none'})
+
+    $(`.main-top .gif-container`).empty()
+    $(`.main-top .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
+
+    const trendingGIFs = await fetchTrendingGIFs(50)
+    for (let i = 1; i < 50; i++) {
+      let currNum = i
+  
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
+      }
+      else {
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
+      }
+      const randomNum = Math.floor(Math.random() * 300) + 100
+      const gifItem = document.createElement('div')
+      $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
+      $(gifItem).height(randomNum)
+      $(gifItem).addClass('gifItemClass')
+      $(`.main-top .gif-container .column-${currNum}`).append(gifItem)
+    }
   }
 
-  if($(event.target).attr('alt') == 'random') {
+  if($(event.target).attr('alt') == 'random' || $(event.target).html() == 'Random') {
     $('.main-search').css({'display':'none'})
     $('.main-top').css({'display':'none'})
     $('.main-bottom').css({'display':'block'})
     $(".main-bottom .gif-container").empty()
+    $(`.main-bottom .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
 
-    const randomGIFs = await fetchRandomGIFs(12)
-    for (let i = 0; i < 12; i++) {
+    const randomGIFs = await fetchRandomGIFs(50)
+    for (let i = 1; i < 50; i++) {
+      let currNum = i
+  
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
+      }
+      else {
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
+      }
+      const randomNum = Math.floor(Math.random() * 300) + 100
       const gifItem = document.createElement('div')
-      const randomNum = Math.floor(Math.random() * 200) + 100
+      $(gifItem).css({"background-image": `url(${randomGIFs[i - 1].images.downsized.url})`})
       $(gifItem).height(randomNum)
-      $(gifItem).css({"background-image": `url(${randomGIFs[i].images.downsized.url})`})
       $(gifItem).addClass('gifItemClass')
-      $(".main-bottom .gif-container").append(gifItem)
+      $(`.main-bottom .gif-container .column-${currNum}`).append(gifItem)
     }
   }
 
@@ -161,16 +414,45 @@ $('.headerNav').click(async function(event) {
   $('.main-search').css({'display':'block'})
 
   const q = $(event.target).html()
-  const searchGIFs = await fetchSearchGIFs(q, 12)
+  const searchGIFs = await fetchSearchGIFs(q, 50)
   $(".main-search .gif-container").empty()
+  $(`.main-search .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
   $('.main-search .main-title').html(`<p>Searched by: ${q}</p><ul class="related-tags"></ul>`)
-  for (let i = 0; i < 12; i++) {
+  for (let i = 1; i < 50; i++) {
+    let currNum = i
+
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
+    }
+    else {
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
+    }
+
     const gifItem = document.createElement('div')
-    const randomNum = Math.floor(Math.random() * 200) + 100
+    const randomNum = Math.floor(Math.random() * 300) + 100
     $(gifItem).height(randomNum)
-    $(gifItem).css({"background-image": `url(${searchGIFs[i].images.downsized.url})`})
+    $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
     $(gifItem).addClass('gifItemClass')
-    $(".main-search .gif-container").append(gifItem)
+    $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
   }
 
   const relatedSuggestion = await fetchSearchSuggestions(q)
@@ -192,16 +474,44 @@ $('.trending-tags').click(async function(event){
   $('.main-search').css({'display':'block'})
 
   const q = $(event.target).html().replace('#', '')
-  const searchGIFs = await fetchSearchGIFs(q, 12)
+  const searchGIFs = await fetchSearchGIFs(q, 50)
   $(".main-search .gif-container").empty()
+  $(`.main-search .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
   $('.main-search .main-title').html(`<p>Searched by: ${q}</p><ul class="related-tags"></ul>`)
-  for (let i = 0; i < 12; i++) {
+  for (let i = 1; i < 50; i++) {
+    let currNum = i
+
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
+    }
+    else {
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
+    }
     const gifItem = document.createElement('div')
-    const randomNum = Math.floor(Math.random() * 200) + 100
+    const randomNum = Math.floor(Math.random() * 300) + 100
     $(gifItem).height(randomNum)
-    $(gifItem).css({"background-image": `url(${searchGIFs[i].images.downsized.url})`})
+    $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
     $(gifItem).addClass('gifItemClass')
-    $(".main-search .gif-container").append(gifItem)
+    $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
   }
 
   const relatedSuggestion = await fetchSearchSuggestions(q)
@@ -223,16 +533,45 @@ $('.main-search').click(async function(event){
     $('.main-search').css({'display':'block'})
 
     const q = $(event.target).html().replace('#', '')
-    const searchGIFs = await fetchSearchGIFs(q, 12)
+    const searchGIFs = await fetchSearchGIFs(q, 50)
     $(".main-search .gif-container").empty()
+    $(`.main-search .gif-container`).html(`<div class="gifColumn column-1"></div>
+    <div class="gifColumn column-2"></div>
+    <div class="gifColumn column-3"></div>
+    <div class="gifColumn column-4"></div>`)
     $('.main-search .main-title').html(`<p>Searched by: ${q}</p><ul class="related-tags"></ul>`)
-    for (let i = 0; i < 12; i++) {
+    for (let i = 1; i < 50; i++) {
+      let currNum = i
+
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
+      }
+      else {
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
+      }
+
       const gifItem = document.createElement('div')
-      const randomNum = Math.floor(Math.random() * 200) + 100
+      const randomNum = Math.floor(Math.random() * 300) + 100
       $(gifItem).height(randomNum)
-      $(gifItem).css({"background-image": `url(${searchGIFs[i].images.downsized.url})`})
+      $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
       $(gifItem).addClass('gifItemClass')
-      $(".main-search .gif-container").append(gifItem)
+      $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
     }
 
     const relatedSuggestion = await fetchSearchSuggestions(q)
