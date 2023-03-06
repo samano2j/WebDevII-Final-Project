@@ -164,7 +164,8 @@ main {
   display: none; 
 
   #modal-img {
-    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 80vh;
