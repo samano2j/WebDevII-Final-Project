@@ -6,17 +6,12 @@ import { toggleNav } from "./js/hamburgermenu";
 import { fetchRandomGIFs } from "./js/random";
 import { fetchTrendingGIFs } from "./js/trending";
 import { fetchSearchGIFs } from "./js/search";
-import { fetchCategoryGIFs } from "./js/categories";
 import { fetchAutoComplete } from "./js/autocomplete"
-import { fetchChannelSearch } from "./js/channelSearch";
 import { fetchSearchSuggestions } from "./js/search-suggestion";
 import { fetchTrendingSearch } from "./js/trending-search";
 import $ from "jquery";
 
-const SAMPLE_ENDPOINT = 'https://api.giphy.com/v1/gifs/trending'
-
 window.addEventListener('load', async () => {
-  
   const trendingSearch = await fetchTrendingSearch()
   for (let i = 0; i < 3; i++) {
     const trendingTag = document.createElement('li')
@@ -256,7 +251,7 @@ $('.search-box input').keyup(async function(event) {
 
 $('.autocomplete').click(async function(event){
   event.preventDefault()
-  
+
   $('.main-top').css({'display':'none'})
   $('.main-bottom').css({'display':'none'})
   $('.main-search').css({'display':'block'})
@@ -471,7 +466,7 @@ $('.headerNav').click(async function(event) {
   $(".autocomplete").empty()
 })
 
-$('.trending-tags').click(async function(event){ 
+$('.trending-tags').click(async function(event){
   event.preventDefault()
 
   $('.main-top').css({'display':'none'})
@@ -528,9 +523,9 @@ $('.trending-tags').click(async function(event){
 
   $('#search_word').val(' ')
   $(".autocomplete").empty()
-}) 
+})
 
-$('.main-search').click(async function(event){ 
+$('.main-search').click(async function(event){
   event.preventDefault()
   if($(event.target).is("button")) {
     $('.main-top').css({'display':'none'})
