@@ -88,11 +88,6 @@ main {
       flex-direction: column;
       gap: 20px;
     }
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 1000px;
-    gap: 20px;
 
     @media screen and (max-width: 979px) {
       // display: grid;
