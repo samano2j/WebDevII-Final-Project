@@ -10,3 +10,5 @@
 ```bash
 $ npm run build
 ```
+Our deployed site:
+https://relaxed-strudel-110b12.netlify.app
