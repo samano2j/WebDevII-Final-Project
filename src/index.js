@@ -416,11 +416,13 @@ $('.group').click(async function(event) {
 
 $('.headerNav').click(async function(event) {
   event.preventDefault()
-
   $('.main-top').css({'display':'none'})
   $('.main-bottom').css({'display':'none'})
   $('.main-search').css({'display':'block'})
-
+  const body = document.body;
+  const hamburger = document.getElementById("js-hamburger");
+  const blackBg = document.getElementById("js-black-bg");
+  body.classList.remove("nav-open");
   const q = $(event.target).html()
   const searchGIFs = await fetchSearchGIFs(q, 50)
   $(".main-search .gif-container").empty()
@@ -595,6 +597,22 @@ $('.main-search').click(async function(event){
     $('#search_word').val(' ')
     $(".autocomplete").empty()
   }
+})
+
+//Show Modal
+$('.gif-container').click(function(event){
+  event.preventDefault()
+  $('.hamburger_btn').css({"display":"none"})
+  $('.modal').css({"display":"flex"})
+  let imgSrc = $(event.target).parent().css("background-image")
+  $('#modal-img').css({"background-image": `${imgSrc}`})
+})
+
+//Close Modal
+$(".closeModal").click(function() {
+  $('.modal').css({"display":"none"})
+  $('body').css({"overflow-y":"scroll"})
+  $('.hamburger_btn').css({"display":"block"})
 })
 
 toggleNav()
