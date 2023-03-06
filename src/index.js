@@ -51,6 +51,7 @@ window.addEventListener('load', async () => {
     $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
     $(gifItem).height(randomNum)
     $(gifItem).addClass('gifItemClass')
+    $(gifItem).html('<div class="overlay"></div>')
     $(`.main-top .gif-container .column-${currNum}`).append(gifItem)
   }
 
@@ -85,6 +86,7 @@ window.addEventListener('load', async () => {
     $(gifItem).css({"background-image": `url(${randomGIFs[i - 1].images.downsized.url})`})
     $(gifItem).height(randomNum)
     $(gifItem).addClass('gifItemClass')
+    $(gifItem).html('<div class="overlay"></div>')
     $(`.main-bottom .gif-container .column-${currNum}`).append(gifItem)
   }
 
@@ -136,6 +138,7 @@ $('#submit_btn').click(async function(event) {
       $(gifItem).height(randomNum)
       $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
       $(gifItem).addClass('gifItemClass')
+      $(gifItem).html('<div class="overlay"></div>')
       $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
     }
 
@@ -194,6 +197,7 @@ $('.siteIcon').click(async function(event) {
       $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
       $(gifItem).height(randomNum)
       $(gifItem).addClass('gifItemClass')
+      $(gifItem).html('<div class="overlay"></div>')
       $(`.main-top .gif-container .column-${currNum}`).append(gifItem)
     }
 
@@ -234,6 +238,7 @@ $('.siteIcon').click(async function(event) {
       $(gifItem).css({"background-image": `url(${randomGIFs[i - 1].images.downsized.url})`})
       $(gifItem).height(randomNum)
       $(gifItem).addClass('gifItemClass')
+      $(gifItem).html('<div class="overlay"></div>')
       $(`.main-bottom .gif-container .column-${currNum}`).append(gifItem)
     }
 })
@@ -295,6 +300,7 @@ $('.autocomplete').click(async function(event){
     $(gifItem).height(randomNum)
     $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
     $(gifItem).addClass('gifItemClass')
+    $(gifItem).html('<div class="overlay"></div>')
     $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
   }
 
@@ -353,6 +359,7 @@ $('.group').click(async function(event) {
       $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
       $(gifItem).height(randomNum)
       $(gifItem).addClass('gifItemClass')
+      $(gifItem).html('<div class="overlay"></div>')
       $(`.main-top .gif-container .column-${currNum}`).append(gifItem)
     }
   }
@@ -398,6 +405,7 @@ $('.group').click(async function(event) {
       $(gifItem).css({"background-image": `url(${randomGIFs[i - 1].images.downsized.url})`})
       $(gifItem).height(randomNum)
       $(gifItem).addClass('gifItemClass')
+      $(gifItem).html('<div class="overlay"></div>')
       $(`.main-bottom .gif-container .column-${currNum}`).append(gifItem)
     }
   }
@@ -452,6 +460,7 @@ $('.headerNav').click(async function(event) {
     $(gifItem).height(randomNum)
     $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
     $(gifItem).addClass('gifItemClass')
+    $(gifItem).html('<div class="overlay"></div>')
     $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
   }
 
@@ -511,6 +520,7 @@ $('.trending-tags').click(async function(event){
     $(gifItem).height(randomNum)
     $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
     $(gifItem).addClass('gifItemClass')
+    $(gifItem).html('<div class="overlay"></div>')
     $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
   }
 
@@ -571,6 +581,7 @@ $('.main-search').click(async function(event){
       $(gifItem).height(randomNum)
       $(gifItem).css({"background-image": `url(${searchGIFs[i - 1].images.downsized.url})`})
       $(gifItem).addClass('gifItemClass')
+      $(gifItem).html('<div class="overlay"></div>')
       $(`.main-search .gif-container .column-${currNum}`).append(gifItem)
     }
 
