@@ -93,7 +93,16 @@ main {
       // display: grid;
       // grid-template-columns: repeat(2, 1fr);
       // max-height: 1000px;
+      .column-3, .column-4{
+        display: none;
+    }
+  
+    }
+  }
 
+  @media screen and (max-width: 979px) {
+    .gif-container {
+      grid-template-columns: auto auto;
     }
   }
 

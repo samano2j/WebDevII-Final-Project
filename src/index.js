@@ -25,18 +25,32 @@ window.addEventListener('load', async () => {
   }
   
   const trendingGIFs = await fetchTrendingGIFs(16)
+  
   for (let i = 1; i < 17; i++) {
     let currNum = i
-
-    if ((currNum - 4) <= 0 ) {
-      currNum = i
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
     }
     else {
-      while (currNum > 0) {
-        currNum -= 4
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
       }
-      currNum += 4
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
     }
+  
     const randomNum = Math.floor(Math.random() * 300) + 100
     const gifItem = document.createElement('div')
     $(gifItem).css({"background-image": `url(${trendingGIFs[i - 1].images.downsized.url})`})
@@ -49,14 +63,27 @@ window.addEventListener('load', async () => {
   for (let i = 1; i < 17; i++) {
     let currNum = i
 
-    if ((currNum - 4) <= 0 ) {
-      currNum = i
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
     }
     else {
-      while (currNum > 0) {
-        currNum -= 4
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
       }
-      currNum += 4
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
     }
     const randomNum = Math.floor(Math.random() * 300) + 100
     const gifItem = document.createElement('div')
@@ -86,14 +113,27 @@ $('#submit_btn').click(async function(event) {
     for (let i = 1; i < 50; i++) {
       let currNum = i
 
-      if ((currNum - 4) <= 0 ) {
-        currNum = i
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
       }
       else {
-        while (currNum > 0) {
-          currNum -= 4
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
         }
-        currNum += 4
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
       }
       
       const gifItem = document.createElement('div')
@@ -132,14 +172,27 @@ $('.siteIcon').click(async function(event) {
     for (let i = 1; i < 17; i++) {
       let currNum = i
   
-      if ((currNum - 4) <= 0 ) {
-        currNum = i
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
       }
       else {
-        while (currNum > 0) {
-          currNum -= 4
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
         }
-        currNum += 4
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
       }
       const randomNum = Math.floor(Math.random() * 300) + 100
       const gifItem = document.createElement('div')
@@ -159,14 +212,27 @@ $('.siteIcon').click(async function(event) {
     for (let i = 1; i < 17; i++) {
       let currNum = i
   
-      if ((currNum - 4) <= 0 ) {
-        currNum = i
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
       }
       else {
-        while (currNum > 0) {
-          currNum -= 4
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
         }
-        currNum += 4
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
       }
       const randomNum = Math.floor(Math.random() * 300) + 100
       const gifItem = document.createElement('div')
@@ -206,14 +272,27 @@ $('.autocomplete').click(async function(event){
   for (let i = 1; i < 50; i++) {
     let currNum = i
 
-    if ((currNum - 4) <= 0 ) {
-      currNum = i
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
     }
     else {
-      while (currNum > 0) {
-        currNum -= 4
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
       }
-      currNum += 4
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
     }
 
     const gifItem = document.createElement('div')
@@ -252,14 +331,27 @@ $('.group').click(async function(event) {
     for (let i = 1; i < 50; i++) {
       let currNum = i
   
-      if ((currNum - 4) <= 0 ) {
-        currNum = i
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
       }
       else {
-        while (currNum > 0) {
-          currNum -= 4
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
         }
-        currNum += 4
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
       }
       const randomNum = Math.floor(Math.random() * 300) + 100
       const gifItem = document.createElement('div')
@@ -284,14 +376,27 @@ $('.group').click(async function(event) {
     for (let i = 1; i < 50; i++) {
       let currNum = i
   
-      if ((currNum - 4) <= 0 ) {
-        currNum = i
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
       }
       else {
-        while (currNum > 0) {
-          currNum -= 4
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
         }
-        currNum += 4
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
       }
       const randomNum = Math.floor(Math.random() * 300) + 100
       const gifItem = document.createElement('div')
@@ -324,14 +429,27 @@ $('.headerNav').click(async function(event) {
   for (let i = 1; i < 50; i++) {
     let currNum = i
 
-    if ((currNum - 4) <= 0 ) {
-      currNum = i
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
     }
     else {
-      while (currNum > 0) {
-        currNum -= 4
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
       }
-      currNum += 4
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
     }
 
     const gifItem = document.createElement('div')
@@ -371,14 +489,27 @@ $('.trending-tags').click(async function(event){
   for (let i = 1; i < 50; i++) {
     let currNum = i
 
-    if ((currNum - 4) <= 0 ) {
-      currNum = i
+    if($( window ).width() > 979) {
+      if ((currNum - 4) <= 0 ) {
+        currNum = i
+      }
+      else {
+        while (currNum > 0) {
+          currNum -= 4
+        }
+        currNum += 4
+      }
     }
     else {
-      while (currNum > 0) {
-        currNum -= 4
+      if ((currNum - 2) <= 0 ) {
+        currNum = i
       }
-      currNum += 4
+      else {
+        while (currNum > 0) {
+          currNum -= 2
+        }
+        currNum += 2
+      }
     }
     const gifItem = document.createElement('div')
     const randomNum = Math.floor(Math.random() * 300) + 100
@@ -417,14 +548,27 @@ $('.main-search').click(async function(event){
     for (let i = 1; i < 50; i++) {
       let currNum = i
 
-      if ((currNum - 4) <= 0 ) {
-        currNum = i
+      if($( window ).width() > 979) {
+        if ((currNum - 4) <= 0 ) {
+          currNum = i
+        }
+        else {
+          while (currNum > 0) {
+            currNum -= 4
+          }
+          currNum += 4
+        }
       }
       else {
-        while (currNum > 0) {
-          currNum -= 4
+        if ((currNum - 2) <= 0 ) {
+          currNum = i
         }
-        currNum += 4
+        else {
+          while (currNum > 0) {
+            currNum -= 2
+          }
+          currNum += 2
+        }
       }
 
       const gifItem = document.createElement('div')
